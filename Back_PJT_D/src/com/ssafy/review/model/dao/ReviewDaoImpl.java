@@ -11,9 +11,16 @@ public class ReviewDaoImpl implements ReviewDao {
 	private List<Review> list = new ArrayList<>(); // 데이터 베이스 대신
 
 	private ReviewDaoImpl() {
-		list.add(new Review("thx", "노세희", "도움이 많이 되었습니다. 감사합니다. ^^"));
-		list.add(new Review("하...죽는줄...", "정현아", "자체 0.5배속으로 간다."));
-		list.add(new Review("3키로 감량 성공!!", "김유경", "이 영상 믿고 하세요!!"));
+		list.add(new Review("thx", "노세희", "도움이 많이 되었습니다. 감사합니다. ^^","swRNeYw1JkY"));
+		list.add(new Review("하...죽는줄...", "정현아", "자체 0.5배속으로 간다.","swRNeYw1JkY"));
+		list.add(new Review("3키로 감량 성공!!", "김유경", "이 영상 믿고 하세요!!","swRNeYw1JkY"));
+		list.add(new Review("thx", "노세희", "도움이 많이 되었습니다. 감사합니다. ^^","54tTYO-vU2E"));
+		list.add(new Review("하...죽는줄...", "정현아", "자체 0.5배속으로 간다.","QqqZH3j_vH0"));
+		list.add(new Review("3키로 감량 성공!!", "김유경", "이 영상 믿고 하세요!!","tzN6ypk6Sps"));
+		list.add(new Review("thx", "노세희", "도움이 많이 되었습니다. 감사합니다. ^^","u5OgcZdNbMo"));
+		list.add(new Review("하...죽는줄...", "정현아", "자체 0.5배속으로 간다.","PjGcOP-TQPE"));
+		list.add(new Review("3키로 감량 성공!!", "김유경", "이 영상 믿고 하세요!!","7TLk7pscICk"));
+		
 	}
 
 	public static ReviewDao getInstance() {

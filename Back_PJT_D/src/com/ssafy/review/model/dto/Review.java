@@ -10,16 +10,18 @@ public class Review {
 	private String content;
 	private String regDate;
 	private int viewCnt;
+	private String youtubeId;
 
 	public Review() {
 	}
 
-	public Review(String title, String writer, String content) {
+	public Review(String title, String writer, String content,String youtubeId) {
 		this.id = no++;
 		this.title = title;
 		this.writer = writer;
 		this.content = content;
 		this.regDate = new Date().toString();
+		this.youtubeId = youtubeId;
 	}
 
 	public int getId() {
@@ -68,6 +70,14 @@ public class Review {
 
 	public void setViewCnt(int viewCnt) {
 		this.viewCnt = viewCnt;
+	}
+
+	public String getYoutubeId() {
+		return youtubeId;
+	}
+
+	public void setYoutubeId(String youtubeId) {
+		this.youtubeId = youtubeId;
 	}
 
 	@Override

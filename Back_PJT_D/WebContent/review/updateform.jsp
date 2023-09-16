@@ -12,6 +12,7 @@
 	<form action="review" method="POST">
 		<input type="hidden" name="act" value="update">
 		<input type="hidden" name="id" value="${review.id}">
+		<input type="hidden" name="youtubeId" value="${review.youtubeId}">
 		<fieldset>
 		<legend>글 수정 내용</legend>
 			제목 : <input type="text" name="title" value="${review.title }"> <br> 

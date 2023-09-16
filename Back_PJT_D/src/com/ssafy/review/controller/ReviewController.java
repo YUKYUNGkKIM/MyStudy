@@ -66,15 +66,18 @@ public class ReviewController extends HttpServlet {
 		String title = req.getParameter("title");
 		String writer = req.getParameter("writer");
 		String content = req.getParameter("content");
+		String youtubeId = req.getParameter("youtubeId");
 
 		Review review = new Review();
 		review.setId(id);
 		review.setTitle(title);
 		review.setWriter(writer);
 		review.setContent(content);
+		review.setYoutubeId(youtubeId);
 
 		service.modifyReview(review);
-		resp.sendRedirect("review?act=list");
+		System.out.println(req.getParameter("youtubeId"));
+		resp.sendRedirect("review?act=list&youtubeId=" + youtubeId);
 	}
 
 	private void doUpdateForm(HttpServletRequest request, HttpServletResponse response)
@@ -96,12 +99,13 @@ public class ReviewController extends HttpServlet {
 		String title = request.getParameter("title");
 		String writer = request.getParameter("writer");
 		String content = request.getParameter("content");
+		String youtubeId = request.getParameter("youtubeId");
 
-		Review review = new Review(title, writer, content);
+		Review review = new Review(title, writer, content, youtubeId);
 
 		service.writeReview(review);
 
-		response.sendRedirect("review?act=list");
+		response.sendRedirect("review?act=list&youtubeId=" + youtubeId);
 
 	}
 
