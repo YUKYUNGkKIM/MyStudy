@@ -87,7 +87,6 @@
 			<th>등록일</th>
 		</tr>
 		<c:forEach items="${list}" var="review">
-	
 			<c:if test="${review.youtubeId == param.youtubeId}">
 				<tr>
 					<td>${review.id }</td>

@@ -57,8 +57,9 @@ public class ReviewController extends HttpServlet {
 
 	private void doRemove(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		int id = Integer.parseInt(req.getParameter("id"));
+		String youtubeId = req.getParameter("youtubeId");
 		service.removeReview(id);
-		resp.sendRedirect("review?act=list");
+		resp.sendRedirect("review?act=list&youtubeId=" + youtubeId);
 	}
 
 	private void doUpdate(HttpServletRequest req, HttpServletResponse resp) throws IOException {
