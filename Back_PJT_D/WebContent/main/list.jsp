@@ -87,7 +87,7 @@
 							<div>
 								<a href="review?act=list&youtubeId=${video.youtubeId }"> <img
 									src="http://img.youtube.com/vi/${video.youtubeId }/mqdefault.jpg"
-									class="d-block" width="350px" alt="..." />
+									class="d-block" width="350px" alt="..." />${video.title }
 								</a> <br> 조회수 : ${video.viewCnt }
 							</div>
 						</c:forEach>
